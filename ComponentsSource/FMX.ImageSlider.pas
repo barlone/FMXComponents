@@ -159,6 +159,7 @@ type
     procedure Prev;   //Previous Page
     procedure Next;   //Next Page
     property Datas[Index: Integer]: string read GetDatas write SetDatas; //Page value(ex 0page = Datas[0])
+    property Dots:TSliderDots read FDots;
   published
     property Align;
     property Height;
@@ -213,11 +214,13 @@ end;
 
 procedure TFMXImageSlider.AddImage(const Value: string; Image: TImage);
 var
-  Page: TLayout;
+  Page: TRectangle;
 begin
-  Page := TLayout.Create(Self);
+  Page := TRectangle.Create(Self);
+  Page.Fill.Color := 0;
+  Page.Stroke.Color := TAlphaColorRec.Red;
   Image.Stored    := False;
-  Image.WrapMode := TImageWrapMode.Stretch;
+  Image.WrapMode := TImageWrapMode.Fit;
   Image.Parent    := Page;
   Image.HitTest   := False;
   Image.Align     := TAlignLayout.Client;
@@ -225,9 +228,12 @@ begin
 end;
 
 procedure TFMXImageSlider.AddPage(const Value: string; Page: TControl);
+var dx,dy:Single;
 begin
   Page.Parent := FContainer;
-  Page.SetBounds(0,0, FContainer.Width, FContainer.Height);
+  dx := 00;
+  dy := 00;
+  Page.BoundsRect:=  RectF(-dx,-dy, FContainer.Width+2*dx, FContainer.Height+2*dy);
   Page.Stored := False;
   Page.Visible := False;
   Page.TagString  := Value;
@@ -244,7 +250,7 @@ begin
     FPages[I].DisposeOf;
   end;
   FPages.Clear;
-  ActivePage := -1;
+  FActivePage := -1;
   FDots.DotCount := PageCount;
 end;
 
@@ -341,7 +347,7 @@ begin
   if FIsTimer then
     FTimer.Enabled := False;
   FIsMove := False;
-  if (PageCount > 0) and (Button = TMouseButton.mbLeft) then
+  if (PageCount > 1) and (Button = TMouseButton.mbLeft) then
   begin
     FStartDrag := True;
     FBeforeDrag := True;
@@ -438,6 +444,9 @@ var
   Layout1, Layout2: TControl;
   Index2: Integer;
 begin
+  if (FActivePage<0)or(FActivePage>=FPages.Count) then
+    exit;
+
   Layout1 := FPages[FActivePage];
   Layout1.Position.X := DeltaX;
   if PageCount > 0 then
@@ -729,7 +738,8 @@ begin
   X := (Self.Width - FDotContainer.Width) / 2;
   W := (DotCount * 2 - 1) * DotSize;
   B := TRectF.Create(X, 0, X + W, DotSize);
-  B := B.SnapToPixel(Scene.GetSceneScale, False);
+  if Scene<>NIL then
+    B := B.SnapToPixel(Scene.GetSceneScale, False);
   FDotContainer.BoundsRect := B;
 end;
 

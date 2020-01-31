@@ -186,7 +186,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
           end>
         object FMXLoadingIndicator3: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 213.500000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 45.000000000000000000
@@ -198,7 +197,7 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator2: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
+          Enabled = False
           Position.X = 119.100006103515600000
           Position.Y = 17.000000000000000000
           Size.Width = 45.000000000000000000
@@ -210,7 +209,7 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator1: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
+          Enabled = False
           Position.X = 24.700000762939450000
           Position.Y = 17.000000000000000000
           Size.Width = 45.000000000000000000
@@ -222,7 +221,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator4: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 307.400024414062500000
           Position.Y = 17.000000000000000000
           Size.Width = 46.000000000000000000
@@ -234,7 +232,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator5: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 401.800018310546900000
           Position.Y = 17.000000000000000000
           Size.Width = 46.000000000000000000
@@ -245,7 +242,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator12: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 24.200000762939450000
           Position.Y = 97.000000000000000000
           Size.Width = 46.000000000000000000
@@ -257,7 +253,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator14: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 106.600006103515600000
           Position.Y = 110.000000000000000000
           Size.Width = 70.000000000000000000
@@ -269,7 +264,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator15: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 211.000000000000000000
           Position.Y = 100.000000000000000000
           Size.Width = 50.000000000000000000
@@ -281,7 +275,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator18: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 313.400024414062500000
           Position.Y = 103.000000000000000000
           Size.Width = 34.000000000000000000
@@ -293,7 +286,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator20: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 407.800018310546900000
           Position.Y = 103.000000000000000000
           Size.Width = 34.000000000000000000
@@ -305,7 +297,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator22: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 27.200000762939450000
           Position.Y = 180.000000000000000000
           Size.Width = 40.000000000000000000
@@ -317,7 +308,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator24: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 114.600006103515600000
           Position.Y = 173.000000000000000000
           Size.Width = 54.000000000000000000
@@ -329,7 +319,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator26: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 209.000000000000000000
           Position.Y = 173.000000000000000000
           Size.Width = 54.000000000000000000
@@ -341,7 +330,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator28: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 303.400024414062500000
           Position.Y = 180.000000000000000000
           Size.Width = 54.000000000000000000
@@ -353,7 +341,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator29: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 397.800018310546900000
           Position.Y = 180.000000000000000000
           Size.Width = 54.000000000000000000
@@ -483,7 +470,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
           end>
         object FMXLoadingIndicator6: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 24.700000762939450000
           Position.Y = 17.000000000000000000
           Size.Width = 45.000000000000000000
@@ -495,7 +481,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator7: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 119.100006103515600000
           Position.Y = 17.000000000000000000
           Size.Width = 45.000000000000000000
@@ -507,7 +492,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator8: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 213.500000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 45.000000000000000000
@@ -519,7 +503,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator9: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 307.400024414062500000
           Position.Y = 17.000000000000000000
           Size.Width = 46.000000000000000000
@@ -531,7 +514,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator10: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 401.800018310546900000
           Position.Y = 17.000000000000000000
           Size.Width = 46.000000000000000000
@@ -542,7 +524,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator11: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 24.200000762939450000
           Position.Y = 97.000000000000000000
           Size.Width = 46.000000000000000000
@@ -554,7 +535,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator13: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 106.600006103515600000
           Position.Y = 110.000000000000000000
           Size.Width = 70.000000000000000000
@@ -566,7 +546,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator16: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 211.000000000000000000
           Position.Y = 100.000000000000000000
           Size.Width = 50.000000000000000000
@@ -578,7 +557,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator17: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 313.400024414062500000
           Position.Y = 103.000000000000000000
           Size.Width = 34.000000000000000000
@@ -590,7 +568,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator19: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 407.800018310546900000
           Position.Y = 103.000000000000000000
           Size.Width = 34.000000000000000000
@@ -602,7 +579,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator21: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 27.200000762939450000
           Position.Y = 180.000000000000000000
           Size.Width = 40.000000000000000000
@@ -614,7 +590,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator23: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 114.600006103515600000
           Position.Y = 173.000000000000000000
           Size.Width = 54.000000000000000000
@@ -626,7 +601,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator25: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 209.000000000000000000
           Position.Y = 173.000000000000000000
           Size.Width = 54.000000000000000000
@@ -638,7 +612,6 @@ object LoadingIndicatorDemoForm: TLoadingIndicatorDemoForm
         end
         object FMXLoadingIndicator27: TFMXLoadingIndicator
           Anchors = []
-          HitTest = False
           Position.X = 303.400024414062500000
           Position.Y = 180.000000000000000000
           Size.Width = 54.000000000000000000

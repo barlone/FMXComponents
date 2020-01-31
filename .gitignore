@@ -1,6 +1,8 @@
 *.identcache
 *.stat
 *.local
+*.dcu
+*.~*
 /ComponentsSource/__history
 /Demo/ScrollYearsDemo.dproj.local
 /Demo/__history
