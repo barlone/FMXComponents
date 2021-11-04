@@ -63,7 +63,7 @@ type
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
-    procedure SetData(p1x, p1y, p2x, p2y: Double);
+    procedure SetData(p1x, p1y, p2x, p2y: Double); reintroduce;
     procedure SetBezier(bezier: TBezier);
     function BezierTime: Single;
   published

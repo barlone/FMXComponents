@@ -92,6 +92,7 @@ procedure TLoadingIndicatorDemoForm.FormCreate(Sender: TObject);
 begin
 //  FBezier := TBezier.Create(0.09,0.57,0.49,0.9);
   FBezier := TBezier.Create(0.42,0,0.58,1);
+  FMXLoadingIndicator2.Stop;
 end;
 
 procedure TLoadingIndicatorDemoForm.FormDestroy(Sender: TObject);
