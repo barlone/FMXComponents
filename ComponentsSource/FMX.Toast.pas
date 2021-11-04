@@ -4,7 +4,7 @@
 //
 // TFMXToast is a toast component using pure fmx
 //
-// 该控件参考了Aone的文章
+// 赂脙驴脴录镁虏脦驴录脕脣Aone碌脛脦脛脮脗
 // http://www.cnblogs.com/onechen/p/7130227.html
 //
 //  https://github.com/zhaoyipeng/FMXComponents
@@ -47,6 +47,7 @@ type
     FIsBlock: Boolean;
     FIsShowIng: Boolean;
     FAlign: TTextAlign;
+    FWordWrap: Boolean;
     procedure SetToastMessage(const Value: string);
     procedure SetFontColor(const Value: TAlphaColor);
     procedure SetBackColor(const Value: TAlphaColor);
@@ -70,6 +71,7 @@ type
     property ToastMessage: string read FToastMessage write SetToastMessage;
     property Delay: Single read FDelay write SetDelay;
     property IsBlock: Boolean read FIsBlock write SetIsBlock default False;
+    property WordWrap: Boolean read FWordWrap write FWordWrap default true;
   end;
 
 implementation
@@ -96,6 +98,7 @@ begin
   FIsBlock := False;
   FIsShowing := False;
   FAlign := TTextAlign.Trailing;
+  self.WordWrap := true;
 end;
 
 destructor TFMXToast.Destroy;
@@ -157,9 +160,10 @@ begin
   AOwner.AddObject(FToastContainer);
   R := RectF(0, 0, 10000, 10000);
   FToastText.Canvas.Font.Size := FFontSize;
-  FToastText.Canvas.MeasureText(R, FToastMessage, False, [], TTextAlign.Leading, TTextAlign.Leading);
-  FToastRect.Height := R.Height * 1.8;
+  FToastText.Canvas.MeasureText(R, FToastMessage, self.WordWrap, [], TTextAlign.Leading, TTextAlign.Leading);
+  FToastRect.Height := R.Height * 1.8+5;
   FToastRect.Width := R.Width + FToastContainer.Width - 48;
+  FToastRect.Opacity := 0.9;
 
   case FAlign of
     TTextAlign.Leading:
@@ -211,7 +215,7 @@ begin
   FToastText := TText.Create(FToastContainer);
   FToastText.HitTest := False;
   FToastText.Align := TAlignLayout.Client;
-  FToastText.TextSettings.WordWrap := False;
+  FToastText.TextSettings.WordWrap := self.WordWrap;
   FToastText.Parent := FToastRect;
 
   FToastAnimation := TFloatAnimation.Create(FToastContainer);
